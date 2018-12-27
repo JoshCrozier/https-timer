@@ -2,15 +2,6 @@
   "name": "https-timer",
   "version": "0.0.2",
   "description": "Node.js module for timing HTTP/S requests",
-  "main": "index.js",
-  "files": [
-    "lib/",
-    "index.js"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JoshCrozier/https-timer.git"
-  },
   "keywords": [
     "timer",
     "http",
@@ -21,11 +12,28 @@
   ],
   "author": "Josh Crozier <crozier4@gmail.com> (https://joshcrozier.com/)",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "main": "index.js",
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshCrozier/https-timer.git"
+  },
   "bugs": {
     "url": "https://github.com/JoshCrozier/https-timer/issues"
   },
   "homepage": "https://github.com/JoshCrozier/https-timer#readme",
   "engines": {
     "node": ">= 6.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "standard": "^12.0.1"
   }
 }
