@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/http-timer');
+module.exports = require('./lib/https-timer');

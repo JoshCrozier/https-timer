@@ -1,6 +1,6 @@
 {
-  "name": "http-timer",
-  "version": "0.0.1",
+  "name": "https-timer",
+  "version": "0.0.2",
   "description": "Node.js module for timing HTTP/S requests",
   "main": "index.js",
   "files": [
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoshCrozier/http-timer.git"
+    "url": "git+https://github.com/JoshCrozier/https-timer.git"
   },
   "keywords": [
     "timer",
@@ -22,9 +22,9 @@
   "author": "Josh Crozier <crozier4@gmail.com> (https://joshcrozier.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JoshCrozier/http-timer/issues"
+    "url": "https://github.com/JoshCrozier/https-timer/issues"
   },
-  "homepage": "https://github.com/JoshCrozier/http-timer#readme",
+  "homepage": "https://github.com/JoshCrozier/https-timer#readme",
   "engines": {
     "node": ">= 6.0.0"
   }
