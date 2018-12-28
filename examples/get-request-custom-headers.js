@@ -1,3 +1,5 @@
+'use strict';
+
 const httpsTimer = require('./../index.js');
 
 const url = 'https://api.github.com/repos/JoshCrozier/https-timer';

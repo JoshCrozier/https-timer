@@ -1,3 +1,5 @@
+'use strict';
+
 const httpsTimer = require('./../index.js');
 
 httpsTimer.get('https://www.google.com', (error, response) => {

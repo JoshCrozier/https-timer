@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "sourceType": "script"
+  },
   "env": {
     "node": true,
     "mocha": true
@@ -6,6 +9,7 @@
   "extends": "standard",
   "rules": {
     "semi": ["error", "always"],
+    "strict": ["error", "safe"],
     "space-before-function-paren": ["error", "never"]
   }
 }
