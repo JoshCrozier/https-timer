@@ -3,18 +3,20 @@
   "version": "0.0.2",
   "description": "Node.js module for timing HTTP/S requests",
   "keywords": [
-    "timer",
     "http",
     "https",
+    "timer",
     "request",
-    "http timer",
-    "https timer"
+    "http-timer",
+    "https-timer",
+    "request-timer",
+    "zero-dependency"
   ],
-  "author": "Josh Crozier <crozier4@gmail.com> (https://joshcrozier.com/)",
+  "author": "Josh Crozier <crozier4@gmail.com> (https://joshcrozier.com)",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha ./test/index.js"
+    "test": "npm run lint && mocha ./test"
   },
   "main": "index.js",
   "files": [
@@ -37,6 +39,7 @@
     "chai": "^4.2.0",
     "eslint": "^5.11.1",
     "mocha": "^5.2.0",
+    "nock": "^10.0.5",
     "standard": "^12.0.1"
   }
 }

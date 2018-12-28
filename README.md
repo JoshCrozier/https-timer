@@ -1,7 +1,7 @@
 https-timer
 ==========
 
-A [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
+A lightweight, dependency-free [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
 
 Useful for determining the timing of the following events:
 
@@ -9,7 +9,6 @@ Useful for determining the timing of the following events:
 - DNS Lookup
 - TCP Connection
 - TLS Handshake
-- Request
 - Time to First Byte
 - Content transfer
 
@@ -41,7 +40,6 @@ Here is an example snapshot of the `timing` object. The timing durations are in 
     "dnsLookup": 20.326722,
     "tcpConnection": 45.247362,
     "tlsHandshake": 93.815933,
-    "sendRequest": 1.593583,
     "firstByte": 154.307801,
     "contentTransfer": 2.472127,
     "total": 319.355484
