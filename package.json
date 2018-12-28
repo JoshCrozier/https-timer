@@ -1,6 +1,6 @@
 {
   "name": "https-timer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Node.js module for timing HTTP/S requests",
   "keywords": [
     "http",
@@ -16,7 +16,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha ./test"
+    "test": "npm run lint && mocha ./test",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0"
   },
   "main": "index.js",
   "files": [
@@ -37,6 +38,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
+    "conventional-changelog-cli": "^2.0.11",
     "eslint": "^5.11.1",
     "mocha": "^5.2.0",
     "nock": "^10.0.5",
