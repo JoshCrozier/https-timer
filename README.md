@@ -2,10 +2,11 @@
 
 [![npm package](https://nodei.co/npm/https-timer.png?downloads=true)](https://www.npmjs.com/package/https-timer)
 
-[![NPM version](https://img.shields.io/npm/v/https-timer.svg?style=flat)](https://www.npmjs.com/package/https-timer)
-[![Build status](https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat)](https://travis-ci.org/JoshCrozier/https-timer)
-[![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat)](https://david-dm.org/JoshCrozier/https-timer)
-[![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
+[![NPM version](https://img.shields.io/npm/v/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
+[![Build status](https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat-square)](https://travis-ci.org/JoshCrozier/https-timer)
+[![Coverage](https://img.shields.io/codecov/c/github/JoshCrozier/https-timer.svg?style=flat-square)](https://codecov.io/github/request/request?branch=master)
+[![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer)
+[![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
 [![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
 [![NPM downloads](https://img.shields.io/npm/dm/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
 
