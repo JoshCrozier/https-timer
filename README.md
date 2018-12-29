@@ -1,24 +1,13 @@
 # https-timer
 
-[![NPM version][npm-image]][npm-url]
-[![Build status][travis-image]][travis-url]
-[![Dependencies][david-image]][david-url]
-[![DevDependencies][david-dev-image]][david-dev-url]
-[![Vulnerabilities][snyk-image]][snyk-url]
-[![NPM downloads][download-image]][download-url]
+[![npm package](https://nodei.co/npm/https-timer.png?downloads=true)](https://www.npmjs.com/package/https-timer)
 
-[npm-image]: https://img.shields.io/npm/v/https-timer.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/https-timer
-[travis-image]: https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat
-[travis-url]: https://travis-ci.org/JoshCrozier/https-timer
-[david-image]: https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat
-[david-url]: https://david-dm.org/JoshCrozier/https-timer
-[david-dev-image]: https://david-dm.org/JoshCrozier/https-timer/dev-status.svg
-[david-dev-url]: https://david-dm.org/JoshCrozier/https-timer?type=dev
-[snyk-image]: https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/https-timer
-[download-image]: https://img.shields.io/npm/dm/https-timer.svg?style=flat-square
-[download-url]: https://www.npmjs.com/package/https-timer
+[![NPM version](https://img.shields.io/npm/v/https-timer.svg?style=flat)](https://www.npmjs.com/package/https-timer)
+[![Build status](https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat)](https://travis-ci.org/JoshCrozier/https-timer)
+[![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat)](https://david-dm.org/JoshCrozier/https-timer)
+[![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
+[![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
+[![NPM downloads](https://img.shields.io/npm/dm/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
 
 A lightweight, dependency-free [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
 
@@ -63,6 +52,29 @@ Here is an example snapshot of the `timing` object. The timing durations are in 
     "total": 439.02664
   }
 }
+```
+
+## Request with custom options
+
+Since `httpsTimer` utilizes the native Node.js [`http`](https://nodejs.org/api/http.html) and [`https`](https://nodejs.org/api/https.html) modules, you can pass an `options` object when making a request:
+
+```js
+const httpsTimer = require('https-timer');
+const url = 'https://api.github.com/repos/JoshCrozier/https-timer';
+const options = {
+  headers: {
+    'User-Agent': 'HTTPS Request Timer'
+  }
+};
+
+httpsTimer.get(url, options, (error, response) => {
+  if (!error && response && response.statusCode === 200) {
+    console.log('Response body: ', JSON.parse(response.body));
+    console.log('Response Timing: ', response.timing);
+  } else {
+    console.log('Request error: ', error);
+  }
+});
 ```
 
 
