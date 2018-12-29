@@ -105,6 +105,18 @@ function testRequestByMethod(method) {
       done(error);
     });
   });
+
+  it('should still execute the request without a callback argument', done => {
+    expect(() => httpsTimer[method](config.mockEndpoint)).not.to.throw();
+
+    done();
+  });
+
+  it('should still execute the request without a callback argument even if an error is thrown', done => {
+    expect(() => httpsTimer[method](config.mockEndpointWithError)).not.to.throw();
+
+    done();
+  });
 }
 
 module.exports = {

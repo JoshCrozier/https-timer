@@ -11,7 +11,24 @@ describe('Core API - httpsTimer', () => {
 
   describe('.get()', () => {
     shared.testRequestByMethod('get');
+
+    it('should have a TLS duration of zero when requesting a non-HTTPS endpoint', done => {
+      httpsTimer.get(config.realEndpointNoTLS, (error, response) => {
+        expect(response.timing.durations.tlsHandshake).to.be.equal(0);
+
+        done(error);
+      });
+    }).timeout(config.MAX_TIMEOUT);
+
+    it('should have a DNS duration of zero when requesting an IP address', done => {
+      httpsTimer.get(config.realEndpointIP, (error, response) => {
+        expect(response.timing.durations.dnsLookup).to.be.equal(0);
+
+        done(error);
+      });
+    }).timeout(config.MAX_TIMEOUT);
   });
+
   describe('.request()', () => {
     shared.testRequestByMethod('request');
 
