@@ -1,6 +1,6 @@
 {
   "name": "https-timer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lightweight, dependency-free Node.js module for timing HTTP/HTTPS requests",
   "keywords": [
     "http",

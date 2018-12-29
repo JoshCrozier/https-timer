@@ -4,7 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
 [![Build status](https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat-square)](https://travis-ci.org/JoshCrozier/https-timer)
-[![Coverage](https://img.shields.io/codecov/c/github/JoshCrozier/https-timer.svg?style=flat-square)](https://codecov.io/github/request/request?branch=master)
+[![Coverage](https://img.shields.io/codecov/c/github/JoshCrozier/https-timer.svg?style=flat-square)](https://codecov.io/github/JoshCrozier/https-timer)
 [![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer)
 [![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
 [![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
