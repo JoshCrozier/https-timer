@@ -1,11 +1,12 @@
 'use strict';
 
-const basePath = 'https://localhost';
+const basePath = 'https://localhost:8080';
 
 module.exports = {
-  mockEndpoint: `${basePath}:8080`,
-  mockEndpointPost: `${basePath}:8080/post`,
-  mockEndpointWithError: `${basePath}:8081`,
+  mockEndpoint: `${basePath}`,
+  mockEndpointPost: `${basePath}/post`,
+  mockEndpoint500Status: `${basePath}/500-status`,
+  mockEndpointWithError: `${basePath}/throw-error`,
   expectedTimingDurationKeys: [
     'socketOpen', 'dnsLookup', 'tcpConnection',
     'tlsHandshake', 'firstByte', 'contentTransfer',

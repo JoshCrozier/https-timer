@@ -61,14 +61,15 @@ Since `httpsTimer` utilizes the native Node.js [`http`](https://nodejs.org/api/h
 
 ```js
 const httpsTimer = require('https-timer');
-const url = 'https://api.github.com/repos/JoshCrozier/https-timer';
+
 const options = {
+  url: 'https://api.github.com/repos/JoshCrozier/https-timer',
   headers: {
     'User-Agent': 'HTTPS Request Timer'
   }
 };
 
-httpsTimer.get(url, options, (error, response) => {
+httpsTimer.get(options, (error, response) => {
   if (!error && response && response.statusCode === 200) {
     console.log('Response body: ', JSON.parse(response.body));
     console.log('Response Timing: ', response.timing);

@@ -5,8 +5,9 @@ const httpsTimer = require('./../index.js');
 const config = require('./config');
 
 function testRequestByMethod(method) {
-  it('should return a valid response object on success and the error should be null', done => {
+  it('should return a valid response object on a 200 success and the error should be null', done => {
     httpsTimer[method](config.mockEndpoint, (error, response) => {
+      expect(response.statusCode).to.be.equal(200);
       expect(error).to.be.equal(null);
       expect(response).to.not.equal(undefined);
       expect(response).to.be.an('object');
@@ -15,7 +16,18 @@ function testRequestByMethod(method) {
     });
   });
 
-  it('should return an error on failure and the response object should be null', done => {
+  it('should return a valid response object on a 500 internal server response and the error should be null', done => {
+    httpsTimer[method](config.mockEndpoint500Status, (error, response) => {
+      expect(response.statusCode).to.be.equal(500);
+      expect(error).to.be.equal(null);
+      expect(response).to.not.equal(undefined);
+      expect(response).to.be.an('object');
+
+      done(error);
+    });
+  });
+
+  it('should return an error if an error is thrown and the response object should be null', done => {
     httpsTimer[method](config.mockEndpointWithError, (error, response) => {
       expect(error).to.not.be.equal(null);
       expect(response).to.equal(null);
@@ -73,6 +85,22 @@ function testRequestByMethod(method) {
       const sumOfDurations = nonTotalDurationKeys.map(key => durations[key]).reduce((a, b) => a + b, 0);
 
       expect(durations.total).to.closeTo(sumOfDurations, 0.001);
+
+      done(error);
+    });
+  });
+
+  it('should accept an `options` object with a `url` property as the first param', done => {
+    httpsTimer[method]({
+      url: config.mockEndpoint
+    }, (error, response) => {
+      const durations = response.timing.durations;
+
+      expect(error).to.be.equal(null);
+      expect(response).to.be.an('object');
+
+      expect(durations).to.be.an('object');
+      expect(durations).to.contain.keys(config.expectedTimingDurationKeys);
 
       done(error);
     });
