@@ -8,7 +8,6 @@
 [![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer)
 [![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
 [![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
-[![NPM downloads](https://img.shields.io/npm/dm/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
 
 A lightweight, dependency-free [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
 

@@ -1,7 +1,15 @@
+## 1.0.0 (2018-12-29)
+
+* Add more tests to reach 100% code coverage ([76d7365](https://github.com/JoshCrozier/https-timer/commit/76d7365))
+* Update the core methods to accept a URL or options object interchangeably ([a6b9a1d](https://github.com/JoshCrozier/https-timer/commit/a6b9a1d))
+
+
+
 ## <small>0.1.2 (2018-12-29)</small>
 
 * Add code coverage scripts ([67ea9af](https://github.com/JoshCrozier/https-timer/commit/67ea9af))
 * Add more tests to improve code coverage ([50dfdb8](https://github.com/JoshCrozier/https-timer/commit/50dfdb8))
+* Changelog updates ([fbb2a73](https://github.com/JoshCrozier/https-timer/commit/fbb2a73))
 * Documentation updates with an example for making a request with custom options ([16c2e9a](https://github.com/JoshCrozier/https-timer/commit/16c2e9a))
 * Ignore test coverage output ([fa1600b](https://github.com/JoshCrozier/https-timer/commit/fa1600b))
 
