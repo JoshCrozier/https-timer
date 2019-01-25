@@ -80,8 +80,7 @@ httpsTimer.get(options, (error, response) => {
 
 ## Promises and Async/Await
 
-The `get`/`request` methods also have async equivalents: `getAsync`/`requestAsync`:
-
+The `get` and `request` methods also have async equivalents: `getAsync` and `requestAsync` respectively.
 
 Promise usage:
 
