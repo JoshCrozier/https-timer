@@ -1,6 +1,6 @@
 {
   "name": "https-timer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lightweight, dependency-free Node.js module for timing HTTP/HTTPS requests",
   "keywords": [
     "http",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/JoshCrozier/https-timer#readme",
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 8.0.0"
   },
   "dependencies": {},
   "devDependencies": {

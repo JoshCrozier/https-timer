@@ -1,6 +1,16 @@
+## 1.1.0 (2019-01-25)
+
+* Add additional examples for async usage ([44b1c54](https://github.com/JoshCrozier/https-timer/commit/44b1c54))
+* Add documentation for the async methods ([dfde05a](https://github.com/JoshCrozier/https-timer/commit/dfde05a))
+* Add support for promises and async/await ([e3cbff1](https://github.com/JoshCrozier/https-timer/commit/e3cbff1))
+* Release v1.1.0 ([9cf7792](https://github.com/JoshCrozier/https-timer/commit/9cf7792))
+
+
+
 ## 1.0.0 (2018-12-29)
 
 * Add more tests to reach 100% code coverage ([76d7365](https://github.com/JoshCrozier/https-timer/commit/76d7365))
+* Stable release 1.0.0 ([382b4f3](https://github.com/JoshCrozier/https-timer/commit/382b4f3))
 * Update the core methods to accept a URL or options object interchangeably ([a6b9a1d](https://github.com/JoshCrozier/https-timer/commit/a6b9a1d))
 
 
