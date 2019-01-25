@@ -43,4 +43,34 @@ describe('Core API - httpsTimer', () => {
       });
     });
   });
+
+  describe('.getAsync()', () => {
+    it('should be the async equivalent for the `get` method', done => {
+      httpsTimer.getAsync(config.mockEndpoint).then(response => {
+        shared.expectTimingDurations(response);
+
+        done();
+      }).catch(done);
+    });
+
+    it('should be compatible with async/await', async() => {
+      const response = await httpsTimer.getAsync(config.mockEndpoint);
+      shared.expectTimingDurations(response);
+    });
+  });
+
+  describe('.requestAsync()', () => {
+    it('should be the async equivalent for the `request` method', done => {
+      httpsTimer.requestAsync(config.mockEndpoint).then(response => {
+        shared.expectTimingDurations(response);
+
+        done();
+      }).catch(done);
+    });
+
+    it('should be compatible with async/await', async() => {
+      const response = await httpsTimer.requestAsync(config.mockEndpoint);
+      shared.expectTimingDurations(response);
+    });
+  });
 });

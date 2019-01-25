@@ -4,6 +4,13 @@ const expect = require('chai').expect;
 const httpsTimer = require('./../index.js');
 const config = require('./config');
 
+function expectTimingDurations(response) {
+  const durations = response.timing.durations;
+
+  expect(durations).to.be.an('object');
+  expect(durations).to.contain.keys(config.expectedTimingDurationKeys);
+}
+
 function testRequestByMethod(method) {
   it('should return a valid response object on a 200 success and the error should be null', done => {
     httpsTimer[method](config.mockEndpoint, (error, response) => {
@@ -56,10 +63,7 @@ function testRequestByMethod(method) {
 
   it('should contain a `timing.duration` object with the expected durations keys', done => {
     httpsTimer[method](config.mockEndpoint, (error, response) => {
-      const durations = response.timing.durations;
-
-      expect(durations).to.be.an('object');
-      expect(durations).to.contain.keys(config.expectedTimingDurationKeys);
+      expectTimingDurations(response);
 
       done(error);
     });
@@ -120,5 +124,6 @@ function testRequestByMethod(method) {
 }
 
 module.exports = {
-  testRequestByMethod
+  testRequestByMethod,
+  expectTimingDurations
 };
