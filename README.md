@@ -5,8 +5,6 @@
 [![NPM version](https://img.shields.io/npm/v/https-timer.svg?style=flat-square)](https://www.npmjs.com/package/https-timer)
 [![Build status](https://img.shields.io/travis/JoshCrozier/https-timer.svg?style=flat-square)](https://travis-ci.org/JoshCrozier/https-timer)
 [![Coverage](https://img.shields.io/codecov/c/github/JoshCrozier/https-timer.svg?style=flat-square)](https://codecov.io/github/JoshCrozier/https-timer)
-[![Dependencies](https://img.shields.io/david/JoshCrozier/https-timer.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer)
-[![DevDependencies](https://david-dm.org/JoshCrozier/https-timer/dev-status.svg?style=flat-square)](https://david-dm.org/JoshCrozier/https-timer?type=dev)
 [![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
 
 A lightweight, dependency-free [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
@@ -19,6 +17,8 @@ Useful for determining the duration of different HTTPS phases:
 - TLS Handshake
 - Time to First Byte
 - Content Transfer
+
+Used on [PingMe.io](https://pingme.io/) for testing website latency.
 
 ## Installation
 
@@ -78,6 +78,27 @@ httpsTimer.get(options, (error, response) => {
 });
 ```
 
+## Promises and Async/Await
+
+The `get`/`request` methods also have async equivalents: `getAsync`/`requestAsync`:
+
+
+Promise usage:
+
+```js
+httpsTimer.getAsync('https://www.google.com').then(response => {
+  console.log(response.timing);
+});
+```
+
+Async/Await usage:
+
+```js
+const response = await httpsTimer.getAsync('https://www.google.com');
+console.log(response.timing);
+```
+
+For more detailed examples with error handling, see the [examples directory](https://github.com/JoshCrozier/https-timer/tree/master/examples).
 
 ## License
 
