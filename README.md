@@ -7,7 +7,7 @@
 [![Coverage](https://img.shields.io/codecov/c/github/JoshCrozier/https-timer.svg?style=flat-square)](https://codecov.io/github/JoshCrozier/https-timer)
 [![Vulnerabilities](https://snyk.io/test/npm/https-timer/badge.svg?style=flat-square)](https://snyk.io/test/npm/https-timer)
 
-A lightweight, dependency-free [Node.js]((https://nodejs.org)) module for timing HTTP/HTTPS requests.
+A lightweight, dependency-free [Node.js](https://nodejs.org) module for timing HTTP/HTTPS requests.
 
 Useful for determining the duration of different HTTPS phases:
 
@@ -85,6 +85,8 @@ The `get` and `request` methods also have async equivalents: `getAsync` and `req
 Promise usage:
 
 ```js
+const httpsTimer = require('https-timer');
+
 httpsTimer.getAsync('https://www.google.com').then(response => {
   console.log(response.timing);
 });
@@ -93,14 +95,42 @@ httpsTimer.getAsync('https://www.google.com').then(response => {
 Async/Await usage:
 
 ```js
+const httpsTimer = require('https-timer');
+
 const response = await httpsTimer.getAsync('https://www.google.com');
+
 console.log(response.timing);
 ```
 
 For more detailed examples with error handling, see the [examples directory](https://github.com/JoshCrozier/https-timer/tree/master/examples).
 
+## Command-Line Usage
+
+If you prefer to time requests directly from the command-line with preformatted output, you can alternatively install the [time-request](https://github.com/JoshCrozier/time-request) package:
+
+    $ npm install -g time-request
+
+Usage:
+
+    $ time-request https://google.com
+
+Example Output:
+
+```
+Request Phase               Duration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Socket Open                 1.61 ms
+DNS Lookup                  34.15 ms
+TCP Connection              47.69 ms
+TLS Handshake               102.25 ms
+Time to First Byte          67.23 ms
+Content Transfer            1.69 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Total                       254.62 ms
+```
+
 ## License
 
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-2018 Josh Crozier
+Copyright (c) 2016-2019 Josh Crozier
