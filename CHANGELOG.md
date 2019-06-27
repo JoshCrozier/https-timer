@@ -1,9 +1,16 @@
+## <small>1.1.1 (2019-06-27)</small>
+
+* Add documentation for CLI usage ([b9fc5d1](https://github.com/JoshCrozier/https-timer/commit/b9fc5d1))
+* Package updates ([460873e](https://github.com/JoshCrozier/https-timer/commit/460873e))
+
+
+
 ## 1.1.0 (2019-01-25)
 
 * Add additional examples for async usage ([44b1c54](https://github.com/JoshCrozier/https-timer/commit/44b1c54))
 * Add documentation for the async methods ([dfde05a](https://github.com/JoshCrozier/https-timer/commit/dfde05a))
 * Add support for promises and async/await ([e3cbff1](https://github.com/JoshCrozier/https-timer/commit/e3cbff1))
-* Release v1.1.0 ([9cf7792](https://github.com/JoshCrozier/https-timer/commit/9cf7792))
+* Release v1.1.0 ([9939d90](https://github.com/JoshCrozier/https-timer/commit/9939d90))
 
 
 
